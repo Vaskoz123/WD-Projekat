@@ -8,9 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
-       
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+        </style>
         <link rel="icon" type="image/x-icon" href="img/mac+burger+icon-1320086857925698636.png">
-        
     </head>
     <body>
         <header  id="navbar">
@@ -29,19 +30,23 @@
             </nav>
         </header>
         <section id="home">
-            <div id="slikeHome">
-                <div id="card">
-                    <img src="/WD Projekat/img/online-order.png" alt="order" id="slikaOrder">
-                    <h1 class="opis">Order your favorite food!</h1>
+            <div id="naslovnaCointainer">
+                <div id="slikeHome">
+                    <div id="card">
+                        <img src="/WD Projekat/img/online-order.png" alt="order" id="slikaOrder">
+                        <h1 class="opis">Order your favorite food!</h1>
+                    </div>
+                    <div id="card">
+                        <img src="./img/Delicious-hamburger-png.png" alt="hamburger" id="slikaBurger">
+                        <h1 class="opis">Pick it up!</h1>
+                    </div>
+                    <div id="card">
+                        <img src="./img/go-to-work.png" alt="go" id="slikaGo">
+                        <h1 class="opis">Enjoy it on the go!</h1>
+                    </div>
                 </div>
-                <div id="card">
-                    <img src="./img/Delicious-hamburger-png.png" alt="hamburger" id="slikaBurger">
-                    <h1 class="opis">Pick it up!</h1>
-                </div>
-                <div id="card">
-                    <img src="./img/go-to-work.png" alt="go" id="slikaGo">
-                    <h1 class="opis">Enjoy it on the go!</h1>
-                </div>
+                <a href="#order" id="naslovcic">ORDER DOWN</a>
+                <img src="img/SeekPng.com_arrow-vector-png_1019922.png" alt="arrow-down" id="arrow">
             </div>
         </section>
         <section id="order">
@@ -71,6 +76,7 @@
               <button type="button" class="btn" onclick="editFoodForm();removeFoodForm()">Confirm Changes</button>
 
             </div>
+         
            
         </section>
         <section id="addFood">
