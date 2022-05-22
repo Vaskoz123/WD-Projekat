@@ -148,6 +148,7 @@ li,a{
     display:flex;
     flex-direction: column;
     text-align: center;
+    
 }
 .opis{
     font-family: 'Montserrat', sans-serif;
@@ -173,6 +174,20 @@ li,a{
     height: 350px;
     padding: 30px;
    
+}
+@media only screen and (max-width: 1568px){
+    #home{
+        height: 2000px;
+    }
+    #slikeHome{
+        flex-direction: column;
+        min-width: 400px;
+        max-width: 500px;
+        min-height: 100px;
+    }
+    #card{
+        margin-top: 30px;
+    }
 }
 @media only screen and (max-width: 672px){
     /*NAV*/
