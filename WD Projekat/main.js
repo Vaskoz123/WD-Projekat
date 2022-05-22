@@ -1,4 +1,3 @@
-/* BURGIR */
 const hamburger=document.getElementById("hamburger");
 const prviBurger=document.getElementById("prviBurger");
 const drugiBurger=document.getElementById("drugiBurger");
@@ -37,7 +36,7 @@ const renderFood = (food) => {
 
     food.forEach ( food => {
         resultFoodsHtml += `
-        <div class="card text-white bg-warning mb-3" style="width: 16rem;">
+        <div class="card text-white bg-warning mb-3" style="width:20rem;">
             <img class="card-img-top" src="${food.imageUrl}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${food.name}</h5>
