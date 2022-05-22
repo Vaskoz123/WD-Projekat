@@ -37,7 +37,7 @@ const renderFood = (food) => {
 
     food.forEach ( food => {
         resultFoodsHtml += `
-        <div class="card text-white bg-warning mb-3" style="width:20rem;">
+        <div class="card text-white bg-warning mb-3" style="width:17rem; border-radius:20%;">
             <img class="card-img-top" src="${food.imageUrl}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${food.name}</h5>
