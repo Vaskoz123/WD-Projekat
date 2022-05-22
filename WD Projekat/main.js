@@ -37,16 +37,48 @@ const renderFood=(food)=>{
 
     food.forEach(food => {
         resultFoodsHtml += `
-        <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+        <div class="card text-white bg-warning mb-3" style="width: 16rem;">
             <img class="card-img-top" src="${food.imageUrl}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${food.name}</h5>
                 <p class="card-text">${food.price}</p>
-                <button type="button" onclick="buyBook('${food.id}')"class="btn">Buy</button>
+                <button type="button" onclick="buyFood('${food.id}')"class="btn">Buy</button>
             </div>
         </div>
         `;
     });
 
      foods.innerHTML = resultFoodsHtml;
+}
+const buyFood = async (id) => {
+    await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food/${id}`, {
+        method: "DELETE",
+    }).then((response) => {
+        if(!response.ok){
+            alert('Error');
+        }
+    })
+}
+const addFood= async() =>{
+const foodName = document.getElementById('foodName').value;
+const foodPrice = document.getElementById('foodPrice').value;
+const foodImage = document.getElementById('foodImage').value;
+const foodID = document.getElementById('foodID').value;
+
+await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
+    method: 'POST', 
+    headers: new Headers({'content-type': 'application/json'}),
+    body: JSON.stringify({
+        "id": foodID,
+        "name": foodName,
+        "price": foodPrice,
+        "imageUrl": foodImage
+        
+    })
+})
+.then(res => {
+    if(!res.ok){
+        alert('Error');
+    }
+})
 }
