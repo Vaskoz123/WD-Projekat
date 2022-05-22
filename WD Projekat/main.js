@@ -52,8 +52,8 @@ const renderFood = (food) => {
      foods.innerHTML = resultFoodsHtml;
 }
 
-const buyFood = async (id) => {
-    await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food/${id}`, {
+const buyFood =  (id) => {
+     fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food/${id}`, {
         method: "DELETE",
     }).then((response) => {
         if(response.ok){
@@ -61,13 +61,13 @@ const buyFood = async (id) => {
         }
     })
 }
-const addFood = async () =>{
+const addFood =  () =>{
 const foodName = document.getElementById('foodName').value;
 const foodPrice = document.getElementById('foodPrice').value;
 const foodImage = document.getElementById('foodImage').value;
 const foodID = document.getElementById('foodID').value;
 
-await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
+fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
     method: 'POST', 
     headers: {
         'content-type': 'application/json'
@@ -91,13 +91,13 @@ const editFood = () => {
     document.getElementById('editFoodMenu').style.opacity='1';
 }
 
-const editFoodForm = async () => { 
+const editFoodForm =  () => { 
     const editedFoodID = document.getElementById('editfoodID').value;
     const editedFoodImage = document.getElementById('editfoodImage').value;
     const editedFoodName = document.getElementById('editfoodName').value;
     const editedFoodPrice = document.getElementById('editfoodPrice').value;
 
-    await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
+     fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
         method: 'PUT', 
         headers: {
             'content-type': 'application/json'
