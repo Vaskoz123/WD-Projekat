@@ -14,7 +14,7 @@ hamburger.addEventListener("click",() =>{
     drugiBurger.classList.toggle("drugiBurger");
     treciBurger.classList.toggle("treciBurger");
 })
-let food=[];
+
 
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Food')
     .then(response => {
@@ -29,6 +29,7 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Food')
     .catch(err=>{
         console.log(err);
     })
+
 const renderFood = (food) => {
     const foods = document.getElementById('foods');
     
@@ -50,6 +51,7 @@ const renderFood = (food) => {
 
      foods.innerHTML = resultFoodsHtml;
 }
+
 const buyFood = async (id) => {
     await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food/${id}`, {
         method: "DELETE",
@@ -85,13 +87,9 @@ await fetch(`https://ptf-web-dizajn-2022.azurewebsites.net/api/Food`, {
 })
 }
 
-
 const editFood = () => {
     document.getElementById('editFoodMenu').style.opacity='1';
 }
-
-
-
 
 const editFoodForm = async () => { 
     const editedFoodID = document.getElementById('editfoodID').value;
