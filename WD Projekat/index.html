@@ -24,7 +24,6 @@
                 <ul class="nav_links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#order">Order</a></li>
-                    <li><a href="#ourOptions">Our Options</a></li>
                     <li><a href="#addFood">Add Food</a></li>
                 </ul>
             </nav>
@@ -48,6 +47,30 @@
         <section id="order">
             
             <div id="foods"></div>
+
+            <div id="editFoodMenu">
+                <div class="mb-3">
+                    <label for="editfoodName" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control" id="editfoodName">
+                </div>
+                <div class="mb-3">
+                    <label for="editfoodImage" class="col-form-label">Image:</label>
+                    <input type="text" class="form-control" id="editfoodImage">
+                </div>
+                <div class="mb-3">
+                    <label for="editfoodPrice" class="col-form-label">Price:</label>
+                    <input type="text" class="form-control" id="editfoodPrice">
+                </div>
+                <div class="mb-3">
+                    <label for="editfoodID" class="col-form-label">ID:</label>
+                    <input type="text" class="form-control" id="editfoodID">
+                </div>
+                
+              </form>
+
+              <button type="button" class="btn" onclick="editFoodForm();removeFoodForm()">Confirm Changes</button>
+
+            </div>
            
         </section>
         <section id="addFood">
